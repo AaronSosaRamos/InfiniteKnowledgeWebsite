@@ -12,9 +12,18 @@ import Container from '@mui/material/Container';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { FaHome, FaServicestack, FaChartLine, FaBriefcase, FaShareAlt, FaEnvelope } from 'react-icons/fa';
 
-const pages = ['Inicio', 'Servicios', 'Resultados', 'Empleos', 'Redes Sociales', 'Contáctanos'];
+const pages = [
+    { text: 'Inicio', icon: <FaHome /> },
+    { text: 'Servicios', icon: <FaServicestack /> },
+    { text: 'Resultados', icon: <FaChartLine /> },
+    { text: 'Empleos', icon: <FaBriefcase /> },
+    { text: 'Redes Sociales', icon: <FaShareAlt /> },
+    { text: 'Contáctanos', icon: <FaEnvelope /> },
+];
 
 const Navbar: React.FC = () => {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -38,7 +47,7 @@ const Navbar: React.FC = () => {
                 {pages.map((page) => (
                     <ListItem 
                         button 
-                        key={page} 
+                        key={page.text} 
                         sx={{
                             '&:hover': {
                                 backgroundColor: '#0056b3',
@@ -48,8 +57,9 @@ const Navbar: React.FC = () => {
                             color: 'white',
                         }}
                     >
+                        <ListItemIcon sx={{ color: 'inherit' }}>{page.icon}</ListItemIcon>
                         <ListItemText 
-                            primary={page} 
+                            primary={page.text} 
                             sx={{
                                 color: 'inherit',
                             }} 
@@ -104,7 +114,7 @@ const Navbar: React.FC = () => {
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.text}
                                 onClick={handleDrawerClose}
                                 sx={{
                                     my: 2,
@@ -116,7 +126,7 @@ const Navbar: React.FC = () => {
                                     transition: 'background-color 0.3s ease',
                                 }}
                             >
-                                {page}
+                                {page.text}
                             </Button>
                         ))}
                     </Box>
