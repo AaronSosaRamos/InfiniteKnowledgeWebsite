@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
-import InfiniteIcon from '@mui/icons-material/AllInclusive'; // This can represent "InfiniteKnowledge"
+import InfiniteIcon from '@mui/icons-material/AllInclusive';
 import Container from '@mui/material/Container';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';

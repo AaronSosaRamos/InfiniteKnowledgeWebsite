@@ -1,12 +1,11 @@
 import React from 'react';
 import MainLayout from './layouts/MainLayout';
+import MainBanner from './components/MainBanner';
 
 const Home: React.FC = () => {
     return (
         <MainLayout>
-            <div className="p-4">
-                <h1 className="text-2xl font-bold">Bienvenido a InfiniteKnowledge</h1>
-            </div>
+            <MainBanner />
         </MainLayout>
     );
 };
