@@ -1,4 +1,3 @@
-// src/components/MainBanner.tsx
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
