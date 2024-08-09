@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout';
 import MainBanner from './components/MainBanner';
 import ServicesSection from './components/ServicesSection';
 import ResultsSection from './components/ResultsSection';
+import JobsSection from './components/JobsSection';
 
 const Home: React.FC = () => {
     return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
             <MainBanner />
             <ServicesSection />
             <ResultsSection />
+            <JobsSection />
         </MainLayout>
     );
 };

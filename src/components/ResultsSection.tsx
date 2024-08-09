@@ -101,15 +101,15 @@ const ResultsSection: React.FC = () => {
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 textAlign: 'center',
-                                backgroundColor: '#1a5276', // Un tono más claro de azul para las tarjetas
+                                backgroundColor: '#1a5276', 
                                 borderRadius: 2,
                                 p: 3,
                                 boxShadow: 3,
                                 transition: 'transform 0.3s ease-in-out',
-                                maxWidth: 300, // Limitar el ancho máximo de las tarjetas para mantenerlas centradas
+                                maxWidth: 300, 
                                 '&:hover': {
                                     transform: 'scale(1.05)',
-                                    backgroundColor: '#0056b3', // Fondo azul más brillante en hover
+                                    backgroundColor: '#0056b3', 
                                 },
                                 marginBottom: isMobile ? 2 : 0
                             }}
@@ -126,7 +126,7 @@ const ResultsSection: React.FC = () => {
                                     width: 80,
                                     height: 80,
                                     '&:hover': {
-                                        backgroundColor: '#004080', // Cambio de color en hover
+                                        backgroundColor: '#004080',
                                     },
                                     transition: 'background-color 0.3s ease-in-out',
                                 }}
