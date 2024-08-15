@@ -14,14 +14,15 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { FaHome, FaServicestack, FaChartLine, FaBriefcase, FaShareAlt, FaEnvelope } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
 
 const pages = [
-    { text: 'Inicio', icon: <FaHome /> },
-    { text: 'Servicios', icon: <FaServicestack /> },
-    { text: 'Resultados', icon: <FaChartLine /> },
-    { text: 'Empleos', icon: <FaBriefcase /> },
-    { text: 'Redes Sociales', icon: <FaShareAlt /> },
-    { text: 'Contáctanos', icon: <FaEnvelope /> },
+    { text: 'Inicio', icon: <FaHome />, to: 'main-banner' },
+    { text: 'Servicios', icon: <FaServicestack />, to: 'services-section' },
+    { text: 'Resultados', icon: <FaChartLine />, to: 'results-section' },
+    { text: 'Empleos', icon: <FaBriefcase />, to: 'jobs-section' },
+    { text: 'Redes Sociales', icon: <FaShareAlt />, to: 'social-media-section' },
+    { text: 'Contáctanos', icon: <FaEnvelope />, to: 'contact-section' },
 ];
 
 const Navbar: React.FC = () => {
@@ -44,26 +45,34 @@ const Navbar: React.FC = () => {
         >
             <List>
                 {pages.map((page) => (
-                    <ListItem 
-                        button 
-                        key={page.text} 
-                        sx={{
-                            '&:hover': {
-                                backgroundColor: '#0056b3',
-                                color: 'white',
-                            },
-                            transition: 'background-color 0.3s ease',
-                            color: 'white',
-                        }}
+                    <ScrollLink
+                        key={page.text}
+                        to={page.to}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        offset={-70}
                     >
-                        <ListItemIcon sx={{ color: 'inherit' }}>{page.icon}</ListItemIcon>
-                        <ListItemText 
-                            primary={page.text} 
+                        <ListItem 
+                            button 
                             sx={{
-                                color: 'inherit',
-                            }} 
-                        />
-                    </ListItem>
+                                '&:hover': {
+                                    backgroundColor: '#0056b3',
+                                    color: 'white',
+                                },
+                                transition: 'background-color 0.3s ease',
+                                color: 'white',
+                            }}
+                        >
+                            <ListItemIcon sx={{ color: 'inherit' }}>{page.icon}</ListItemIcon>
+                            <ListItemText 
+                                primary={page.text} 
+                                sx={{
+                                    color: 'inherit',
+                                }} 
+                            />
+                        </ListItem>
+                    </ScrollLink>
                 ))}
             </List>
         </Box>
@@ -112,21 +121,29 @@ const Navbar: React.FC = () => {
                     </Typography>
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                         {pages.map((page) => (
-                            <Button
+                            <ScrollLink
                                 key={page.text}
-                                onClick={handleDrawerClose}
-                                sx={{
-                                    my: 2,
-                                    color: 'white',
-                                    display: 'block',
-                                    '&:hover': {
-                                        backgroundColor: '#0056b3',
-                                    },
-                                    transition: 'background-color 0.3s ease',
-                                }}
+                                to={page.to}
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                offset={-70}
                             >
-                                {page.text}
-                            </Button>
+                                <Button
+                                    onClick={handleDrawerClose}
+                                    sx={{
+                                        my: 2,
+                                        color: 'white',
+                                        display: 'block',
+                                        '&:hover': {
+                                            backgroundColor: '#0056b3',
+                                        },
+                                        transition: 'background-color 0.3s ease',
+                                    }}
+                                >
+                                    {page.text}
+                                </Button>
+                            </ScrollLink>
                         ))}
                     </Box>
                 </Toolbar>

@@ -25,7 +25,7 @@ const MainBanner: React.FC = () => {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Capa oscura para mejorar la legibilidad
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
                     zIndex: 1,
                 },
                 '& > *': {
@@ -78,6 +78,7 @@ const MainBanner: React.FC = () => {
                         animation: 'fadeIn 3s ease-in-out',
                         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
                     }}
+                    href='/#services-section'
                 >
                     Descubre más
                 </Button>
@@ -89,12 +90,11 @@ const MainBanner: React.FC = () => {
                         animation: 'fadeIn 4s ease-in-out',
                     }}
                 >
-                    <FaFacebookF className="text-white hover:text-blue-500 transition-colors duration-300" size={40} />
-                    {/* <FaXTwitter className="text-white hover:text-blue-500 transition-colors duration-300" size={40} /> */}
-                    <FaInstagram className="text-white hover:text-pink-500 transition-colors duration-300" size={40} />
-                    <FaLinkedinIn className="text-white hover:text-blue-500 transition-colors duration-300" size={40} />
-                    <FaYoutube className="text-white hover:text-red-500 transition-colors duration-300" size={40} />
-                    <FaTiktok className="text-white hover:text-black transition-colors duration-300" size={40} />
+                    <a href='https://www.facebook.com/profile.php?id=100094648251641&mibextid=ZbWKwL' target='_blank'> <FaFacebookF className="text-white hover:text-blue-500 transition-colors duration-300" size={40} /> </a> 
+                    <a href='https://www.instagram.com/jacorporation16?igsh=MTQ3bHhrYzM2aDMwNA==' target='_blank'> <FaInstagram className="text-white hover:text-pink-500 transition-colors duration-300" size={40} /> </a>
+                    <a href='https://www.linkedin.com/company/j-a-corporation/' target='_blank'> <FaLinkedinIn className="text-white hover:text-blue-500 transition-colors duration-300" size={40} /> </a>
+                    <a href='https://youtube.com/@jacorporation?si=int-AJXIuXRzwsoz' target='_blank'> <FaYoutube className="text-white hover:text-red-500 transition-colors duration-300" size={40} /> </a>
+                    <a href='https://www.tiktok.com/@jacorporation4?_t=8othKtNjZmn&_r=1' target='_blank'>  <FaTiktok className="text-white hover:text-black transition-colors duration-300" size={40} /> </a>
                 </Box>
             </Container>
         </Box>

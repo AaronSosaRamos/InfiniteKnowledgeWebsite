@@ -1,6 +1,6 @@
-// src/layouts/MainLayout.tsx
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 interface MainLayoutProps {
     children: React.ReactNode;
@@ -8,9 +8,10 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Navbar />
-            <main>{children}</main>
+            <main style={{ flex: 1 }}>{children}</main>
+            <Footer />
         </div>
     );
 };
